@@ -1,8 +1,14 @@
 function Select() {
+  // 년도 선택
+  // select -> 드롭다운 메뉴 만들기 위함
+  function ShowData() {
+    // function showdata from json file - year result data
+  }
+
   return (
     <body>
       <select name="year">
-        <option value="">Select Year</option>
+        <option value="select year">Select Year</option>
         <option value="">2021</option>
         <option value="">2020</option>
         <option value="">2019</option>

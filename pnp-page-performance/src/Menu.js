@@ -1,4 +1,5 @@
 function Menu() {
+  // 메뉴 버튼
   return (
     <header>
       <div>PnP logo</div>
