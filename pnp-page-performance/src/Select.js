@@ -1,18 +1,28 @@
+import ResultData from "./ResultData"
+
 function Select() {
   const years = []
   let i
-  for(i=2000; i<2022; i++){
+  // year option출력을 위한 list
+  for(i=2000; i<2022; i++){ 
     years.push(i)
+  }
+  // function for show result data
+  const ShowData = (event) => {
+    const yearvalue = event.target.value
+    if(ResultData[yearvalue]){
+      console.log(ResultData[yearvalue])
+    }
   }
 
   return (
     <body>
-      <select name="year">
+      <select name="year" class="absolute left-0" onClick={ShowData}>
         <option value="select year">Select Year</option>
         {
           years.map((v) => {
             return(
-              <option value="{v}">{v}</option>
+              <option value={v}>{v}</option>
             )
           }
         )
