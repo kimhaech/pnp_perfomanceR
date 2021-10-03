@@ -1,13 +1,24 @@
 function Select() {
-  // 년도 선택
-  // select -> 드롭다운 메뉴 만들기 위함
-  function ShowData() {
-    // function showdata from json file - year result data
+  const years = []
+  let i
+  for(i=2000; i<2022; i++){
+    years.push(i)
   }
 
   return (
     <body>
       <select name="year">
+        <option value="select year">Select Year</option>
+        {
+          years.map((v) => {
+            return(
+              <option value="{v}">{v}</option>
+            )
+          }
+        )
+      }
+      </select>
+      {/* <select name="year">
         <option value="select year">Select Year</option>
         <option value="">2021</option>
         <option value="">2020</option>
@@ -23,7 +34,7 @@ function Select() {
         <option value="">2010</option>
         <option value="">2009</option>
         <option value="">2008</option>
-      </select>
+      </select> */}
     </body>
   )
 }
