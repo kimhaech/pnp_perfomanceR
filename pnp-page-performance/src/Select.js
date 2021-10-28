@@ -17,7 +17,7 @@ function Select() {
 
   return (
     <body>
-      <select name="year" class="absolute left-0" onClick={ShowData}>
+      <select name="year" class="absolute left-0" onChange={ShowData}>
         <option value="select year">Select Year</option>
         {
           years.map((v) => {
