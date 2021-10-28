@@ -11,7 +11,10 @@ function Select() {
   const ShowData = (event) => {
     const yearvalue = event.target.value
     if(ResultData[yearvalue]){
-      console.log(ResultData[yearvalue])
+      // console.log(ResultData[yearvalue][1])
+      document.getElementById('result').innerText = yearvalue
+      document.getElementById('result').style.fontSize = "30px"
+      document.getElementById('detail').innerText = ResultData[yearvalue]
     }
   }
 
@@ -28,23 +31,8 @@ function Select() {
         )
       }
       </select>
-      {/* <select name="year">
-        <option value="select year">Select Year</option>
-        <option value="">2021</option>
-        <option value="">2020</option>
-        <option value="">2019</option>
-        <option value="">2018</option>
-        <option value="">2017</option>
-        <option value="">2016</option>
-        <option value="">2015</option>
-        <option value="">2014</option>
-        <option value="">2013</option>
-        <option value="">2012</option>
-        <option value="">2011</option>
-        <option value="">2010</option>
-        <option value="">2009</option>
-        <option value="">2008</option>
-      </select> */}
+      <p id="result"></p>
+      <span id='detail'></span> 
     </body>
   )
 }
